@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Nexa OS</title>
+
+<!-- Font Awesome Icons -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+<!-- Nexa OS CSS -->
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body>
+
+<!-- =========================================================
+     LOCK SCREEN
+========================================================= -->
+
+<div id="lockScreen" class="lock-screen">
+
+```
+<div class="lock-content">
+
+    <div class="lock-icon">
+        <i class="fa-solid fa-lock"></i>
+    </div>
+
+    <h1>Nexa OS</h1>
+
+    <p id="lockTime">12:00:00 PM</p>
+
+    <p
+        id="lockDate"
+        class="lock-date"
+    >
+        Loading date...
+    </p>
+
+    <button
+        id="unlockBtn"
+        class="unlock-btn"
+    >
+        <i class="fa-solid fa-lock-open"></i>
+        Unlock
+    </button>
+
+</div>
+```
+
+</div>
+
+<!-- =========================================================
+     NEXA OS DESKTOP
+========================================================= -->
+
+<main
+    id="desktop"
+    class="desktop"
+>
+
+```
+<!-- Wallpaper -->
+<div class="wallpaper"></div>
+
+
+<!-- =====================================================
+     TOP GOOGLE SEARCH
+====================================================== -->
+
+<div class="desktop-search">
+
+    <div class="search-box">
+
+        <i class="fa-brands fa-google"></i>
+
+        <input
+            type="text"
+            id="googleSearch"
+            placeholder="Search Google..."
+            autocomplete="off"
+        >
+
+        <button
+            id="searchBtn"
+            title="Search Google"
+        >
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     DESKTOP ICONS
+====================================================== -->
+
+<div class="desktop-icons">
+
+    <button
+        class="desktop-icon"
+        data-app="browser"
+    >
+        <div class="icon-box browser-icon">
+            <i class="fa-solid fa-globe"></i>
+        </div>
+        <span>Browser</span>
+    </button>
+
+
+    <button
+        class="desktop-icon"
+        data-app="calculator"
+    >
+        <div class="icon-box calculator-icon">
+            <i class="fa-solid fa-calculator"></i>
+        </div>
+        <span>Calculator</span>
+    </button>
+
+
+    <button
+        class="desktop-icon"
+        data-app="notes"
+    >
+        <div class="icon-box notes-icon">
+            <i class="fa-solid fa-note-sticky"></i>
+        </div>
+        <span>Notes</span>
+    </button>
+
+
+    <button
+        class="desktop-icon"
+        data-app="files"
+    >
+        <div class="icon-box files-icon">
+            <i class="fa-solid fa-folder"></i>
+        </div>
+        <span>Files</span>
+    </button>
+
+
+    <button
+        class="desktop-icon"
+        data-app="settings"
+    >
+        <div class="icon-box settings-icon">
+            <i class="fa-solid fa-gear"></i>
+        </div>
+        <span>Settings</span>
+    </button>
+
+
+    <button
+        class="desktop-icon"
+        data-app="trash"
+    >
+        <div class="icon-box trash-icon">
+            <i class="fa-solid fa-trash"></i>
+        </div>
+        <span>Trash</span>
+    </button>
+
+</div>
+
+
+<!-- =====================================================
+     CALCULATOR
+====================================================== -->
+
+<section
+    id="calculatorWindow"
+    class="app-window"
+    data-window="calculator"
+>
+
+    <header class="window-header">
+
+        <div class="window-title">
+            <i class="fa-solid fa-calculator"></i>
+            <span>Calculator</span>
+        </div>
+
+        <div class="window-controls">
+
+            <button
+                class="minimize-btn"
+                title="Minimize"
+            >
+                <i class="fa-solid fa-minus"></i>
+            </button>
+
+            <button
+                class="close-btn"
+                title="Close"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <div class="calculator">
+
+        <input
+            id="calcDisplay"
+            class="calc-display"
+            type="text"
+            value="0"
+            readonly
+        >
+
+
+        <div class="calculator-buttons">
+
+            <button
+                class="calc-btn clear"
+                data-value="C"
+            >
+                C
+            </button>
+
+            <button
+                class="calc-btn"
+                data-value="("
+            >
+                (
+            </button>
+
+            <button
+                class="calc-btn"
+                data-value=")"
+            >
+                )
+            </button>
+
+            <button
+                class="calc-btn operator"
+                data-value="/"
+            >
+                ÷
+            </button>
+
+
+            <button
+                class="calc-btn"
+                data-value="7"
+            >
+                7
+            </button>
+
+            <button
+                class="calc-btn"
+                data-value="8"
+            >
+                8
+            </button>
+
+            <button
+                class="calc-btn"
+                data-value="9"
+            >
+                9
+            </button>
+
+            <button
+                class="calc-btn operator"
+                data-value="*"
+            >
+                ×
+            </button>
+
+
+            <button
+                class="calc-btn"
+                data-value="4"
+            >
+                4
+            </button>
+
+            <button
+                class="calc-btn"
+                data-value="5"
+            >
+                5
+            </button>
+
+            <button
+                class="calc-btn"
+                data-value="6"
+            >
+                6
+            </button>
+
+            <button
+                class="calc-btn operator"
+                data-value="-"
+            >
+                −
+            </button>
+
+
+            <button
+                class="calc-btn"
+                data-value="1"
+            >
+                1
+            </button>
+
+            <button
+                class="calc-btn"
+                data-value="2"
+            >
+                2
+            </button>
+
+            <button
+                class="calc-btn"
+                data-value="3"
+            >
+                3
+            </button>
+
+            <button
+                class="calc-btn operator"
+                data-value="+"
+            >
+                +
+            </button>
+
+
+            <button
+                class="calc-btn"
+                data-value="0"
+            >
+                0
+            </button>
+
+            <button
+                class="calc-btn"
+                data-value="."
+            >
+                .
+            </button>
+
+            <button
+                class="calc-btn equals"
+                data-value="="
+            >
+                =
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     NOTES
+====================================================== -->
+
+<section
+    id="notesWindow"
+    class="app-window"
+    data-window="notes"
+>
+
+    <header class="window-header">
+
+        <div class="window-title">
+            <i class="fa-solid fa-note-sticky"></i>
+            <span>Notes</span>
+        </div>
+
+        <div class="window-controls">
+
+            <button
+                class="minimize-btn"
+                title="Minimize"
+            >
+                <i class="fa-solid fa-minus"></i>
+            </button>
+
+            <button
+                class="close-btn"
+                title="Close"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <div class="notes-app">
+
+        <aside class="notes-sidebar">
+
+            <div class="notes-sidebar-header">
+
+                <strong>My Notes</strong>
+
+                <button
+                    id="newNoteBtn"
+                    title="New Note"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+            </div>
+
+
+            <div
+                id="notesList"
+                class="notes-list"
+            >
+                <!-- Notes added by JavaScript -->
+            </div>
+
+        </aside>
+
+
+        <div class="notes-editor">
+
+            <div class="notes-toolbar">
+
+                <button id="saveNoteBtn">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    Save
+                </button>
+
+                <button id="deleteNoteBtn">
+                    <i class="fa-solid fa-trash"></i>
+                    Delete
+                </button>
+
+            </div>
+
+
+            <input
+                id="noteTitle"
+                class="note-title"
+                type="text"
+                placeholder="Note title..."
+            >
+
+
+            <textarea
+                id="noteContent"
+                class="note-content"
+                placeholder="Write your note here..."
+            ></textarea>
+
+
+            <div
+                id="notesStatus"
+                class="notes-status"
+            >
+                Ready
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     BROWSER
+====================================================== -->
+
+<section
+    id="browserWindow"
+    class="app-window browser-window"
+    data-window="browser"
+>
+
+    <header class="window-header">
+
+        <div class="window-title">
+            <i class="fa-solid fa-globe"></i>
+            <span>Nexa Browser</span>
+        </div>
+
+        <div class="window-controls">
+
+            <button
+                class="minimize-btn"
+                title="Minimize"
+            >
+                <i class="fa-solid fa-minus"></i>
+            </button>
+
+            <button
+                class="close-btn"
+                title="Close"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <div class="browser-app">
+
+        <div class="browser-toolbar">
+
+            <button
+                id="browserBack"
+                title="Back"
+            >
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+
+            <button
+                id="browserForward"
+                title="Forward"
+            >
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <button
+                id="browserReload"
+                title="Reload"
+            >
+                <i class="fa-solid fa-rotate-right"></i>
+            </button>
+
+
+            <input
+                id="browserAddress"
+                type="text"
+                placeholder="Search or enter website..."
+                autocomplete="off"
+            >
+
+
+            <button
+                id="browserGo"
+                title="Go"
+            >
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+
+        <div
+            id="browserPage"
+            class="browser-page"
+        >
+
+            <div class="browser-home">
+
+                <div class="browser-logo">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+
+                <h2>Nexa Browser</h2>
+
+                <p>
+                    Search the web or enter a website address.
+                </p>
+
+
+                <div class="browser-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        id="browserSearchInput"
+                        type="text"
+                        placeholder="Search the web..."
+                        autocomplete="off"
+                    >
+
+                    <button id="browserSearchBtn">
+                        Search
+                    </button>
+
+                </div>
+
+
+                <div class="browser-quick-links">
+
+                    <button
+                        class="quick-link"
+                        data-url="https://www.google.com"
+                    >
+                        <i class="fa-brands fa-google"></i>
+                        Google
+                    </button>
+
+                    <button
+                        class="quick-link"
+                        data-url="https://www.youtube.com"
+                    >
+                        <i class="fa-brands fa-youtube"></i>
+                        YouTube
+                    </button>
+
+                    <button
+                        class="quick-link"
+                        data-url="https://www.wikipedia.org"
+                    >
+                        <i class="fa-brands fa-wikipedia-w"></i>
+                        Wikipedia
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FILE EXPLORER
+====================================================== -->
+
+<section
+    id="filesWindow"
+    class="app-window file-window"
+    data-window="files"
+>
+
+    <header class="window-header">
+
+        <div class="window-title">
+            <i class="fa-solid fa-folder"></i>
+            <span>File Explorer</span>
+        </div>
+
+        <div class="window-controls">
+
+            <button
+                class="minimize-btn"
+                title="Minimize"
+            >
+                <i class="fa-solid fa-minus"></i>
+            </button>
+
+            <button
+                class="close-btn"
+                title="Close"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <div class="file-explorer">
+
+        <aside class="file-sidebar">
+
+            <button
+                class="file-location active"
+                data-location="Home"
+            >
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </button>
+
+
+            <button
+                class="file-location"
+                data-location="Desktop"
+            >
+                <i class="fa-solid fa-desktop"></i>
+                <span>Desktop</span>
+            </button>
+
+
+            <button
+                class="file-location"
+                data-location="Documents"
+            >
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Documents</span>
+            </button>
+
+
+            <button
+                class="file-location"
+                data-location="Downloads"
+            >
+                <i class="fa-solid fa-download"></i>
+                <span>Downloads</span>
+            </button>
+
+
+            <button
+                class="file-location"
+                data-location="Pictures"
+            >
+                <i class="fa-solid fa-image"></i>
+                <span>Pictures</span>
+            </button>
+
+        </aside>
+
+
+        <div class="file-content">
+
+            <div class="file-toolbar">
+
+                <div class="file-breadcrumb">
+
+                    <button
+                        id="fileBackBtn"
+                        title="Back"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+
+                    <span id="fileCurrentLocation">
+                        Home
+                    </span>
+
+                </div>
+
+
+                <div class="file-actions">
+
+                    <button
+                        id="createFileBtn"
+                        title="Create File"
+                    >
+                        <i class="fa-solid fa-file-circle-plus"></i>
+                        New File
+                    </button>
+
+
+                    <button
+                        id="createFolderBtn"
+                        title="Create Folder"
+                    >
+                        <i class="fa-solid fa-folder-plus"></i>
+                        New Folder
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="fileGrid"
+                class="file-grid"
+            >
+                <!-- Files and folders created by JavaScript -->
+            </div>
+
+
+            <div
+                id="fileContextMenu"
+                class="file-context-menu"
+            >
+
+                <button id="contextOpenBtn">
+                    <i class="fa-solid fa-folder-open"></i>
+                    Open
+                </button>
+
+                <button id="contextRenameBtn">
+                    <i class="fa-solid fa-pen"></i>
+                    Rename
+                </button>
+
+                <button id="contextDeleteBtn">
+                    <i class="fa-solid fa-trash"></i>
+                    Move to Trash
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SETTINGS
+====================================================== -->
+
+<section
+    id="settingsWindow"
+    class="app-window"
+    data-window="settings"
+>
+
+    <header class="window-header">
+
+        <div class="window-title">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+        </div>
+
+        <div class="window-controls">
+
+            <button class="minimize-btn">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+
+            <button class="close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <div class="settings-app">
+
+        <h2>Settings</h2>
+
+
+        <div class="settings-item">
+
+            <div class="settings-item-info">
+
+                <i class="fa-solid fa-moon"></i>
+
+                <div>
+                    <strong>Dark Mode</strong>
+                    <p>
+                        Change the Nexa OS appearance.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="themeToggle"
+                    checked
+                >
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+
+        <div class="settings-item">
+
+            <div class="settings-item-info">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <div>
+                    <strong>Notifications</strong>
+                    <p>
+                        Enable desktop notifications.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="notificationToggle"
+                    checked
+                >
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+
+        <div class="settings-item">
+
+            <div class="settings-item-info">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <div>
+                    <strong>Lock Screen</strong>
+                    <p>
+                        Lock Nexa OS.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <button
+                id="lockBtn"
+                class="settings-action"
+            >
+                Lock
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TRASH
+====================================================== -->
+
+<section
+    id="trashWindow"
+    class="app-window"
+    data-window="trash"
+>
+
+    <header class="window-header">
+
+        <div class="window-title">
+            <i class="fa-solid fa-trash"></i>
+            <span>Trash</span>
+        </div>
+
+        <div class="window-controls">
+
+            <button class="minimize-btn">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+
+            <button class="close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <div class="trash-app">
+
+        <div class="trash-toolbar">
+
+            <strong id="trashCount">
+                0 items
+            </strong>
+
+
+            <button
+                id="emptyTrashBtn"
+                class="danger-button"
+            >
+                <i class="fa-solid fa-trash-can"></i>
+                Empty Trash
+            </button>
+
+        </div>
+
+
+        <div
+            id="trashGrid"
+            class="trash-grid"
+        >
+            <!-- Deleted items added by JavaScript -->
+        </div>
+
+
+        <div
+            id="emptyTrashMessage"
+            class="empty-trash"
+        >
+
+            <i class="fa-solid fa-trash-can"></i>
+
+            <h2>Trash is empty</h2>
+
+            <p>
+                Deleted files and folders will appear here.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     NOTIFICATION CENTER
+====================================================== -->
+
+<div
+    id="notificationCenter"
+    class="notification-center"
+>
+
+    <div class="notification-header">
+
+        <strong>Notifications</strong>
+
+        <button id="clearNotifications">
+            Clear
+        </button>
+
+    </div>
+
+
+    <div
+        id="notificationList"
+        class="notification-list"
+    >
+        <!-- Notifications added by JavaScript -->
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     POWER MENU
+====================================================== -->
+
+<div
+    id="powerMenu"
+    class="power-menu"
+>
+
+    <button id="powerLock">
+
+        <i class="fa-solid fa-lock"></i>
+
+        <span>Lock</span>
+
+    </button>
+
+
+    <button id="powerRestart">
+
+        <i class="fa-solid fa-rotate"></i>
+
+        <span>Restart</span>
+
+    </button>
+
+
+    <button id="powerShutdown">
+
+        <i class="fa-solid fa-power-off"></i>
+
+        <span>Shut Down</span>
+
+    </button>
+
+</div>
+
+
+<!-- =====================================================
+     TASKBAR
+====================================================== -->
+
+<footer class="taskbar">
+
+    <button
+        id="startBtn"
+        class="taskbar-button start-button"
+        title="Start"
+    >
+        <i class="fa-solid fa-n"></i>
+    </button>
+
+
+    <div
+        id="taskbarApps"
+        class="taskbar-apps"
+    >
+
+        <button
+            class="taskbar-button"
+            data-app="browser"
+            title="Browser"
+        >
+            <i class="fa-solid fa-globe"></i>
+        </button>
+
+
+        <button
+            class="taskbar-button"
+            data-app="calculator"
+            title="Calculator"
+        >
+            <i class="fa-solid fa-calculator"></i>
+        </button>
+
+
+        <button
+            class="taskbar-button"
+            data-app="notes"
+            title="Notes"
+        >
+            <i class="fa-solid fa-note-sticky"></i>
+        </button>
+
+
+        <button
+            class="taskbar-button"
+            data-app="files"
+            title="File Explorer"
+        >
+            <i class="fa-solid fa-folder"></i>
+        </button>
+
+
+        <button
+            class="taskbar-button"
+            data-app="settings"
+            title="Settings"
+        >
+            <i class="fa-solid fa-gear"></i>
+        </button>
+
+
+        <button
+            class="taskbar-button"
+            data-app="trash"
+            title="Trash"
+        >
+            <i class="fa-solid fa-trash"></i>
+        </button>
+
+    </div>
+
+
+    <div class="taskbar-right">
+
+        <button
+            id="notificationBtn"
+            class="taskbar-button"
+            title="Notifications"
+        >
+            <i class="fa-solid fa-bell"></i>
+
+            <span
+                id="notificationBadge"
+                class="notification-badge"
+            >
+                0
+            </span>
+
+        </button>
+
+
+        <button
+            id="powerBtn"
+            class="taskbar-button"
+            title="Power"
+        >
+            <i class="fa-solid fa-power-off"></i>
+        </button>
+
+
+        <div class="taskbar-clock">
+
+            <span id="clock">
+                12:00:00 PM
+            </span>
+
+            <small id="date">
+                Loading...
+            </small>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     START MENU
+====================================================== -->
+
+<div
+    id="startMenu"
+    class="start-menu"
+>
+
+    <div class="start-header">
+
+        <div class="nexa-logo">
+            <i class="fa-solid fa-n"></i>
+        </div>
+
+
+        <div>
+
+            <strong>Nexa OS</strong>
+
+            <span>
+                Welcome back
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="start-search">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+            id="appSearch"
+            type="text"
+            placeholder="Search apps..."
+            autocomplete="off"
+        >
+
+    </div>
+
+
+    <div class="start-apps">
+
+        <button data-app="browser">
+
+            <i class="fa-solid fa-globe"></i>
+
+            <span>Browser</span>
+
+        </button>
+
+
+        <button data-app="calculator">
+
+            <i class="fa-solid fa-calculator"></i>
+
+            <span>Calculator</span>
+
+        </button>
+
+
+        <button data-app="notes">
+
+            <i class="fa-solid fa-note-sticky"></i>
+
+            <span>Notes</span>
+
+        </button>
+
+
+        <button data-app="files">
+
+            <i class="fa-solid fa-folder"></i>
+
+            <span>Files</span>
+
+        </button>
+
+
+        <button data-app="settings">
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>Settings</span>
+
+        </button>
+
+
+        <button data-app="trash">
+
+            <i class="fa-solid fa-trash"></i>
+
+            <span>Trash</span>
+
+        </button>
+
+    </div>
+
+
+    <div class="start-footer">
+
+        <button id="startLockBtn">
+
+            <i class="fa-solid fa-lock"></i>
+
+            <span>Lock</span>
+
+        </button>
+
+
+        <button id="startPowerBtn">
+
+            <i class="fa-solid fa-power-off"></i>
+
+            <span>Power</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="script.js"></script>
+```
+
+</main>
+
+</body>
+</html>
